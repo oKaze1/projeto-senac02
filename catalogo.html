@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sua Empresa | Catalogo</title>
+  <title>PrimeTech | Catalogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,52 +26,234 @@
   <main>
     <section class="catalog-intro">
       <p class="eyebrow">Selecao especial</p>
-      <h1>Catalogo de Produtos</h1>
-      <p>Conheca os destaques da empresa com espaco para imagens, preco e descricao de cada item.</p>
+      <h1>Catalogo PrimeTech</h1>
+      <p>Pesquise seus produtos, navegue por paginas e depois edite o nome, preco, descricao e detalhes de cada item como quiser.</p>
     </section>
 
-    <section class="product-grid">
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 1</div>
-        <h3>Produto 1</h3>
-        <p class="product-price">R$ 99,90</p>
-        <p>Descricao breve do produto 1. Qualidade, durabilidade e estilo.</p>
+    <section class="catalog-tools">
+      <div class="catalog-search-wrap">
+        <label class="catalog-label" for="product-search">Pesquisar produto</label>
+        <input
+          id="product-search"
+          class="catalog-search"
+          type="search"
+          placeholder="Digite o nome do produto..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="catalog-meta">
+        <p class="catalog-counter" id="product-counter">20 produtos no catalogo</p>
+        <p class="catalog-helper">Os nomes atuais sao provisórios para você editar depois.</p>
+      </div>
+    </section>
+
+    <section class="product-grid" id="product-grid">
+      <article class="product-card" data-name="Produto 01" data-index="1">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto01.jpeg" alt="Produto 01">
+        </div>
+        <h3>Produto 01</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 01, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 2</div>
-        <h3>Produto 2</h3>
-        <p class="product-price">R$ 149,90</p>
-        <p>Descricao breve do produto 2. Ideal para quem busca performance e conforto.</p>
+      <article class="product-card" data-name="Produto 02" data-index="2">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto02.jpeg" alt="Produto 02">
+        </div>
+        <h3>Produto 02</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 02, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 3</div>
-        <h3>Produto 3</h3>
-        <p class="product-price">R$ 79,90</p>
-        <p>Descricao breve do produto 3. Pratico, moderno e acessivel.</p>
+      <article class="product-card" data-name="Produto 03" data-index="3">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto03.jpeg" alt="Produto 03">
+        </div>
+        <h3>Produto 03</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 03, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 4</div>
-        <h3>Produto 4</h3>
-        <p class="product-price">R$ 199,90</p>
-        <p>Descricao breve do produto 4. Elegancia e qualidade para sua rotina.</p>
+      <article class="product-card" data-name="Produto 04" data-index="4">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto04.jpeg" alt="Produto 04">
+        </div>
+        <h3>Produto 04</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 04, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 5</div>
-        <h3>Produto 5</h3>
-        <p class="product-price">R$ 129,90</p>
-        <p>Descricao breve do produto 5. Um item versatil para diferentes necessidades.</p>
+      <article class="product-card" data-name="Produto 05" data-index="5">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto05.jpeg" alt="Produto 05">
+        </div>
+        <h3>Produto 05</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 05, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
-      <article class="product-card">
-        <div class="product-image">Imagem do Produto 6</div>
-        <h3>Produto 6</h3>
-        <p class="product-price">R$ 169,90</p>
-        <p>Descricao breve do produto 6. Luxo e eficiencia em um so pacote.</p>
+      <article class="product-card" data-name="Produto 06" data-index="6">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto06.jpeg" alt="Produto 06">
+        </div>
+        <h3>Produto 06</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 06, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
+
+      <article class="product-card" data-name="Produto 07" data-index="7">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto07.jpeg" alt="Produto 07">
+        </div>
+        <h3>Produto 07</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 07, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 08" data-index="8">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto08.jpeg" alt="Produto 08">
+        </div>
+        <h3>Produto 08</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 08, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 09" data-index="9">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto09.jpeg" alt="Produto 09">
+        </div>
+        <h3>Produto 09</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 09, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 10" data-index="10">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto10.jpeg" alt="Produto 10">
+        </div>
+        <h3>Produto 10</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 10, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 11" data-index="11">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto11.jpeg" alt="Produto 11">
+        </div>
+        <h3>Produto 11</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 11, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 12" data-index="12">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto12.jpeg" alt="Produto 12">
+        </div>
+        <h3>Produto 12</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 12, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 13" data-index="13">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto13.jpeg" alt="Produto 13">
+        </div>
+        <h3>Produto 13</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 13, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 14" data-index="14">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto14.jpeg" alt="Produto 14">
+        </div>
+        <h3>Produto 14</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 14, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 15" data-index="15">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto15.jpeg" alt="Produto 15">
+        </div>
+        <h3>Produto 15</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 15, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 16" data-index="16">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto16.jpeg" alt="Produto 16">
+        </div>
+        <h3>Produto 16</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 16, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 17" data-index="17">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto17.jpeg" alt="Produto 17">
+        </div>
+        <h3>Produto 17</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 17, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 18" data-index="18">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto18.jpeg" alt="Produto 18">
+        </div>
+        <h3>Produto 18</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 18, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 19" data-index="19">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto19.jpeg" alt="Produto 19">
+        </div>
+        <h3>Produto 19</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 19, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+
+      <article class="product-card" data-name="Produto 20" data-index="20">
+        <div class="product-image-frame">
+          <img class="product-image-real" src="produtos/produto20.jpeg" alt="Produto 20">
+        </div>
+        <h3>Produto 20</h3>
+        <p class="product-price">R$ 0,00</p>
+        <p>Adicione aqui a descricao principal do produto 20, destacando os beneficios e diferenciais.</p>
+        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+      </article>
+    </section>
+
+    <section class="catalog-pagination">
+      <button class="catalog-page-button" id="prev-page" type="button">Anterior</button>
+      <p class="catalog-page-status" id="page-status">Pagina 1 de 1</p>
+      <button class="catalog-page-button" id="next-page" type="button">Proxima</button>
     </section>
 
     <div class="back-link">
@@ -80,7 +262,72 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Sua Empresa. Todos os direitos reservados.</p>
+    <p>&copy; 2026 PrimeTech. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    (function () {
+      const cards = Array.from(document.querySelectorAll(".product-card"));
+      const searchInput = document.getElementById("product-search");
+      const counter = document.getElementById("product-counter");
+      const pageStatus = document.getElementById("page-status");
+      const prevButton = document.getElementById("prev-page");
+      const nextButton = document.getElementById("next-page");
+      const itemsPerPage = 8;
+      let currentPage = 1;
+      let filteredCards = cards.slice();
+
+      function renderCards() {
+        const totalPages = Math.max(1, Math.ceil(filteredCards.length / itemsPerPage));
+        currentPage = Math.min(currentPage, totalPages);
+
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        cards.forEach(function (card) {
+          card.hidden = true;
+        });
+
+        filteredCards.slice(start, end).forEach(function (card) {
+          card.hidden = false;
+        });
+
+        counter.textContent = filteredCards.length + (filteredCards.length === 1 ? " produto encontrado" : " produtos encontrados");
+        pageStatus.textContent = "Pagina " + currentPage + " de " + totalPages;
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+      }
+
+      function filterCards() {
+        const query = searchInput.value.trim().toLowerCase();
+
+        filteredCards = cards.filter(function (card) {
+          return card.dataset.name.toLowerCase().includes(query);
+        });
+
+        currentPage = 1;
+        renderCards();
+      }
+
+      searchInput.addEventListener("input", filterCards);
+
+      prevButton.addEventListener("click", function () {
+        if (currentPage > 1) {
+          currentPage -= 1;
+          renderCards();
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        const totalPages = Math.max(1, Math.ceil(filteredCards.length / itemsPerPage));
+        if (currentPage < totalPages) {
+          currentPage += 1;
+          renderCards();
+        }
+      });
+
+      renderCards();
+    })();
+  </script>
 </body>
 </html>

@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sua Empresa | Home</title>
+  <title>PrimeTech | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="intro-active">
+  <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
+    <video
+      class="intro-video"
+      id="intro-video"
+      autoplay
+      muted
+      playsinline
+      preload="auto"
+    >
+      <source src="videos/video-logo.mp4" type="video/mp4">
+    </video>
+    <div class="intro-glow"></div>
+  </div>
+
+  <div class="page-shell" id="page-shell">
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menu">
+  <label for="nav-toggle" class="nav-toggle-label intro-layer intro-layer-nav" aria-label="Abrir menu">
     <span></span>
   </label>
 
@@ -26,34 +41,38 @@
   <main>
     <section class="banner">
       <div class="banner-content">
-        <p class="eyebrow">Sua identidade com presenca</p>
+        <p class="eyebrow intro-layer intro-layer-1">Sua identidade com presenca</p>
 
-        <div class="hero-brand">
-          <div class="logo-placeholder">Sua Logo</div>
+        <div class="hero-brand intro-layer intro-layer-2">
+          <picture class="logo-placeholder">
+            <source srcset="imagens/logo.png" type="image/png">
+            <img src="imagens/logo-jpeg.jpeg" alt="Logo da empresa" class="logo-image">
+          </picture>
 
           <div class="brand-copy">
-            <h1>Sua Empresa</h1>
+            <h1>PrimeTech</h1>
             <p class="slogan">Elegancia que chama atencao e inspira confianca.</p>
           </div>
         </div>
 
-        <div class="button-group">
+        <div class="button-group intro-layer intro-layer-3">
           <a class="button" href="catalogo.html">Ver Catalogo</a>
           <a class="button button-secondary" href="sobre.html">Conhecer a Empresa</a>
         </div>
       </div>
 
-      <div class="hero-note">
+      <div class="hero-note intro-layer intro-layer-4">
         <p>
-          Somos uma empresa dedicada a entregar qualidade, estilo e um atendimento proximo,
-          criando uma experiencia marcante para cada cliente desde o primeiro contato.
+          A PrimeTech é uma loja especializada em eletrônicos e acessórios tecnológicos, focada em oferecer produtos de alta qualidade com preços acessíveis. Trabalhamos com uma seleção moderna de dispositivos, incluindo celulares, fones de ouvido, gadgets e diversos acessórios essenciais para o dia a dia.
+          <br>
+          Nosso objetivo é levar inovação, praticidade e tecnologia de ponta para nossos clientes, sempre com um atendimento de confiança e compromisso com a satisfação. Na PrimeTech, você encontra as melhores soluções tecnológicas em um só lugar.
         </p>
       </div>
     </section>
   </main>
 
   <a
-    class="whatsapp-float"
+    class="whatsapp-float intro-layer intro-layer-float"
     href="https://wa.me/5577999036794"
     target="_blank"
     rel="noopener noreferrer"
@@ -67,5 +86,42 @@
   <footer class="site-footer">
     <p>&copy; 2026 Sua Empresa. Todos os direitos reservados.</p>
   </footer>
+</div>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const overlay = document.getElementById("intro-overlay");
+      const video = document.getElementById("intro-video");
+      let finished = false;
+
+      function revealSite() {
+        if (finished) {
+          return;
+        }
+
+        finished = true;
+        body.classList.add("intro-ending");
+
+        window.setTimeout(function () {
+          body.classList.remove("intro-active", "intro-ending");
+          if (overlay) {
+            overlay.remove();
+          }
+        }, 1400);
+      }
+
+      if (video) {
+        video.addEventListener("ended", revealSite);
+        video.addEventListener("error", function () {
+          window.setTimeout(revealSite, 900);
+        });
+
+        window.setTimeout(revealSite, 9000);
+      } else {
+        revealSite();
+      }
+    })();
+  </script>
 </body>
 </html>
