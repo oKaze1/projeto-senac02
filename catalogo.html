@@ -40,6 +40,7 @@
           placeholder="Digite o nome do produto..."
           autocomplete="off"
         >
+        <div class="catalog-suggestions" id="catalog-suggestions" hidden></div>
       </div>
 
       <div class="catalog-meta">
@@ -51,202 +52,288 @@
     <section class="product-grid" id="product-grid">
       <article class="product-card" data-name="Produto 01" data-index="1">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto01.jpeg" alt="Produto 01">
+          <img class="product-image-real" src="produtos/produto01.jpeg" alt="Mouse USB Óptico Convencional">
         </div>
-        <h3>Produto 01</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 01, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Mouse USB Óptico Convencional</h3>
+        <p class="product-price">R$ 25,50</p>
+        <p>​Resolução: 1.000 DPI (Fixa).
+          <br>
+          ​Design: Ergonômico, focado no conforto para uso prolongado.
+          ​Conectividade: Com fio.
+          ​Uso Ideal: Navegação na internet, planilhas, textos e uso doméstico geral.</p>
+        <p class="product-extra"> Opção mais barata e discreta do mercado.</p>
       </article>
 
       <article class="product-card" data-name="Produto 02" data-index="2">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto02.jpeg" alt="Produto 02">
+          <img class="product-image-real" src="produtos/produto02.jpeg" alt="Mouse Gamer Exbom">
         </div>
-        <h3>Produto 02</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 02, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Mouse Gamer Exbom</h3>
+        <p class="product-price">R$ 32,00</p>
+        <p>​Resolução: Até 3.200 DPI.
+          <br>
+          ​Botões: 7 botões.
+          <br>
+          ​Iluminação: LED RGB com design geométrico nas laterais.
+          <br>
+          ​Design: Formato anatômico com textura para melhor aderência durante o jogo.</p>
+        <p class="product-extra">Oferece botões extras e ajuste de velocidade por um preço muito próximo ao mouse comum.</p>
       </article>
 
       <article class="product-card" data-name="Produto 03" data-index="3">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto03.jpeg" alt="Produto 03">
+          <img class="product-image-real" src="produtos/produto03.jpeg" alt="Mouse Gamer Redragon Cobra RGB">
         </div>
-        <h3>Produto 03</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 03, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Mouse Gamer Redragon Cobra RGB</h3>
+        <p class="product-price">R$ 118,02</p>
+        <p>Marca: Redragon.
+          <br>
+          ​Iluminação: RGB Chroma totalmente personalizável.
+          <br>
+          ​Construção: Materiais de alta qualidade, switches mais resistentes e sensor de alta precisão.
+          <br>
+          ​Software: Geralmente compatível com software para criação de macros e ajuste fino de DPI.</p>
+          <br>
+        <p class="product-extra">É o melhor investimento a longo prazo. Embora seja o mais caro, a precisão do sensor e a qualidade dos componentes são muito superiores</p>
       </article>
 
       <article class="product-card" data-name="Produto 04" data-index="4">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto04.jpeg" alt="Produto 04">
+          <img class="product-image-real" src="produtos/produto04.jpeg" alt="Canon Pixma G3110">
         </div>
-        <h3>Produto 04</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 04, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Canon Pixma G3110</h3>
+        <p class="product-price">R$ 917,15</p>
+        <p>Tecnologia: Mega Tank.
+          <br>
+          ​Conectividade: Wi-Fi e USB.</p>
+        <p class="product-extra">Conhecida pela excelente fidelidade de cores, sendo muito utilizada para impressão de fotos e trabalhos escolares.</p>
       </article>
 
       <article class="product-card" data-name="Produto 05" data-index="5">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto05.jpeg" alt="Produto 05">
+          <img class="product-image-real" src="produtos/produto05.jpeg" alt="Brother DCP-T520W">
         </div>
-        <h3>Produto 05</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 05, destacando os beneficios e diferenciais.</p>
+        <h3>Brother DCP-T520W</h3>
+        <p class="product-price">R$ 1.112,26</p>
+        <p>Tecnologia: Tanque de Tinta. Você recarrega apenas as garrafas de tinta, o que reduz drasticamente o custo por página.
+          <br>
+          ​Conectividade: Wi-Fi (imprime direto do celular), USB e Bivolt.</p>
         <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
       </article>
 
       <article class="product-card" data-name="Produto 06" data-index="6">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto06.jpeg" alt="Produto 06">
+          <img class="product-image-real" src="produtos/produto06.jpeg" alt="Brother MFC-L8900CDW">
         </div>
-        <h3>Produto 06</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 06, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Brother MFC-L8900CDW</h3>
+        <p class="product-price">R$ 5.569,00</p>
+        <p>​Tecnologia: Laser Colorida. Utiliza toners em vez de tinta líquida, o que garante uma velocidade de impressão muito superior e textos mais nítidos.
+          <br>
+          ​Conectividade: Wi-Fi, Ethernet (rede cabiada), USB e integração com nuvem.</p>
+        <p class="product-extra">Possui alimentador automático de documentos (ADF) de alta capacidade, tela touch colorida para comandos e funções avançadas de segurança e digitalização rápida.</p>
       </article>
 
       <article class="product-card" data-name="Produto 07" data-index="7">
         <div class="product-image-frame">
           <img class="product-image-real" src="produtos/produto07.jpeg" alt="Produto 07">
         </div>
-        <h3>Produto 07</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 07, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Tablet PC "Mil10"</h3>
+        <p class="product-price">R$ 658,00</p>
+        <p>​Configuração: 6 GB de RAM e 256 GB de armazenamento, tela de 10 polegadas.
+          <br>
+          ​Acessórios: acompanha teclado bluetooth, funcionando como um conjunto híbrido.</p>
+        <p class="product-extra">O design traseiro lembra o estilo de câmeras de smartphones modernos. É um tablet de entrada com preço muito acessível.</p>
       </article>
 
       <article class="product-card" data-name="Produto 08" data-index="8">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto08.jpeg" alt="Produto 08">
+          <img class="product-image-real" src="produtos/produto08.jpeg" alt="Apple iPad (10ª Geração)">
         </div>
-        <h3>Produto 08</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 08, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Apple iPad (10ª Geração)</h3>
+        <p class="product-price">R$ 3.329,00</p>
+        <p>Chip: A14 Bionic.
+          <br>
+          ​Armazenamento: 128 GB.</p>
+        <p class="product-extra">Sistema operacional iPadOS, que é extremamente fluido e seguro. Possui a melhor tela e câmeras do grupo, além de um alto valor de revenda.</p>
       </article>
 
       <article class="product-card" data-name="Produto 09" data-index="9">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto09.jpeg" alt="Produto 09">
+          <img class="product-image-real" src="produtos/produto09.jpeg" alt="Tablet Belteenk 11.6">
         </div>
-        <h3>Produto 09</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 09, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Tablet Belteenk 11.6</h3>
+        <p class="product-price">R$ 1.185,00</p>
+        <p>​Configuração: Android 14,
+          <br>
+          Memoria: 16 GB de RAM e 512 GB de armazenamento.
+          <br>
+          ​Acessórios: Acompanha: teclado bluetooth, mouse, caneta touch, capa e fones de ouvido.</p>
+        <p class="product-extra">O tamanho da tela (11.6 polegadas) é maior que a média, o que é bom para ver filmes ou usar como um "mini notebook".</p>
       </article>
 
       <article class="product-card" data-name="Produto 10" data-index="10">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto10.jpeg" alt="Produto 10">
+          <img class="product-image-real" src="produtos/produto10.jpeg" alt="Apple iPhone 17 Pro Max (256 GB) - Laranja cósmico">
         </div>
-        <h3>Produto 10</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 10, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Apple iPhone 17 Pro Max (256 GB) - Laranja cósmico</h3>
+        <p class="product-price">R$ 11.879,00</p>
+        <p>iPhone 17 Pro Max.
+          <br>
+          Tela de 6,9 polegadas.
+          <br>
+          design unibody em alumínio.
+          <br>
+          processador A19 Pro.
+          <br>
+          câmaras traseiras de 48 MP.</p>
+        <p class="product-extra">a melhor autonomia de sempre.</p>
       </article>
 
       <article class="product-card" data-name="Produto 11" data-index="11">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto11.jpeg" alt="Produto 11">
+          <img class="product-image-real" src="produtos/produto11.jpeg" alt="Celular Samsung Galaxy A17 - Preto">
         </div>
-        <h3>Produto 11</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 11, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Celular Samsung Galaxy A17 - Preto</h3>
+        <p class="product-price">R$ 1.079,10</p>
+        <p>Possui tela de 6.7 polegadas.
+          <br>
+          256 GB de armazenamento, 8 GB de RAM.
+          <br>
+          câmera traseira de 50 MP.
+          <br>
+          Tela De 6.7, Nfc, Ip54.</p>
+        <p class="product-extra">O Galaxy A17 é mais do que um smartphone é seu novo parceiro para trabalhar, se divertir e se conectar, combinando tecnologia de ponta com a confiabilidade da Samsung.</p>
       </article>
 
       <article class="product-card" data-name="Produto 12" data-index="12">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto12.jpeg" alt="Produto 12">
+          <img class="product-image-real" src="produtos/produto12.jpeg" alt="Notebook ASUS VIVOBOOK GO 15">
         </div>
-        <h3>Produto 12</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 12, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Notebook ASUS VIVOBOOK GO 15</h3>
+        <p class="product-price">R$ 1.957,11</p>
+        <p>INTEL CELERON DUAL CORE N4500.
+          <br>
+          Memória: 4 GB, 128 GB SSD
+          <br>
+          Sistema operacional: Windows 11 Home.
+          <br>
+          Tela: 15.6 polegadas, LED, Star Black.</p>
+        <p class="product-extra">Fino e leve: 18,10 mm e 1,57 kg; 2. Mais produtividade na tela NanoEdge de bordas superfinas; 3. Construção versátil com dobradiça plana que abre até 180º; 4. Ultrassilencioso – sistema de resfriamento sem ventoinhas.</p>
       </article>
 
       <article class="product-card" data-name="Produto 13" data-index="13">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto13.jpeg" alt="Produto 13">
+          <img class="product-image-real" src="produtos/produto13.jpeg" alt="Notebook Gamer Acer Nitro V15">
         </div>
-        <h3>Produto 13</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 13, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Notebook Gamer Acer Nitro V15</h3>
+        <p class="product-price">R$ 5.034,05</p>
+        <p>Intel® Core™ i5-13420H.
+          <br>
+          Placa de video: RTX 3050.
+          <br>
+          Tela: 15.6".
+          <br>
+          Memoria: 8GB de RAM, 512GB SSD.
+          <br>
+          Sistema operacional: Linux - ANV15-52-514Z.</p>
+        <p class="product-extra">Refrigeração Avançada e Design Sólido
+          <br>
+          Ventiladores Duplos e Saídas de Ar Estratégicas.</p>
       </article>
 
       <article class="product-card" data-name="Produto 14" data-index="14">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto14.jpeg" alt="Produto 14">
+          <img class="product-image-real" src="produtos/produto14.jpeg" alt="Notebook ASUS Vivobook 15">
         </div>
-        <h3>Produto 14</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 14, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Notebook ASUS Vivobook 15</h3>
+        <p class="product-price">R$ 4.204,00</p>
+        <p>Intel Core i5.
+          <br>
+          Memoria: 16 GB, 512 GB SSD.
+          <br>
+          Sistema operacional: Windows 11 Home.
+          <br>
+          Tela: 15.6'' FHD, Quiet Blue -X1504VA-NJ1745W.</p>
+        <p class="product-extra">Bordas finas NanoEdge 3. Mais robusto e confiável, com resistência de nível militar.</p>
       </article>
 
       <article class="product-card" data-name="Produto 15" data-index="15">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto15.jpeg" alt="Produto 15">
+          <img class="product-image-real" src="produtos/produto15.jpeg" alt="Fone de Ouvido KZ EDX Pro com Microfone - Cristal">
         </div>
-        <h3>Produto 15</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 15, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Fone de Ouvido KZ EDX Pro com Microfone - Cristal</h3>
+        <p class="product-price">R$ 56,00</p>
+        <p>Driver dinâmico de 10mm com circuito magnético duplo para restaurar a atmosfera do som e proporcionar baixa frequência natural
+          <br>
+          Design transparente com processo de resina incrustada em metal, oferecendo textura extraordinária e aparência atualizada.</p>
+        <p class="product-extra">Cabo plano de 1,2m que evita emaranhamento, com pinos banhados a ouro de 0,75mm e plugue de 3,5mm para versatilidade.</p>
       </article>
 
       <article class="product-card" data-name="Produto 16" data-index="16">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto16.jpeg" alt="Produto 16">
+          <img class="product-image-real" src="produtos/produto16.jpeg" alt="Fone de Ouvido Sem Fio, JBL">
         </div>
-        <h3>Produto 16</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 16, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Fone de Ouvido Sem Fio, JBL</h3>
+        <p class="product-price">R$ 279,00</p>
+        <p>Bluetooth, Wave Beam 2, Intra Auricular, Sem Fio, Resistente À Água e Poeira - Preto.</p>
+        <p class="product-extra">SOM JBL PURE BASS IMPACTANTE. Drivers dinâmicos de 8 mm entregam graves potentes e vibrantes.</p>
       </article>
 
       <article class="product-card" data-name="Produto 17" data-index="17">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto17.jpeg" alt="Produto 17">
+          <img class="product-image-real" src="produtos/produto17.jpeg" alt="Havit Headphone Fone de Ouvido H2002d">
         </div>
-        <h3>Produto 17</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 17, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Havit Headphone Fone de Ouvido H2002d</h3>
+        <p class="product-price">R$ 159,99</p>
+        <p> Com Microfone, Falante 53mm, Plug 3, 5mm: compatível com XBOX ONE e PS4, HAVIT, HV-H2002d.</p>
+        <p class="product-extra">Design elegante, revestimento plático piano
+          <br>
+          Robusto, resistente contra arranhões.</p>
       </article>
 
       <article class="product-card" data-name="Produto 18" data-index="18">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto18.jpeg" alt="Produto 18">
+          <img class="product-image-real" src="produtos/produto18.jpeg" alt="PC Gamer Alienware Aurora">
         </div>
-        <h3>Produto 18</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 18, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>PC Gamer Alienware Aurora</h3>
+        <p class="product-price">R$ 23.498,00</p>
+        <p>Intel® Core™ Ultra 9 285K (24-core, cache total de 76MB, até 5.7 GHz)
+<br>
+          Windows 11 Home (A Dell Technologies recomenda o Windows 11 Pro para empresas)
+<br>
+          NVIDIA® GeForce RTXTM 5070, GDDR7 de 12 GB
+<br>
+          64GB DDR5 (2x32GB) 5200MT/s
+<br>
+          SSD de 1TB PCIe NVMe M.2
+<br>
+          Fonte de Alimentação de 1000W com Certificação Platinum e sistema resfriamento Liquid Cooler de 240m.</p>
+        <p class="product-extra"></p>
       </article>
 
       <article class="product-card" data-name="Produto 19" data-index="19">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto19.jpeg" alt="Produto 19">
+          <img class="product-image-real" src="produtos/produto19.jpeg" alt="Ryzen 5 7600X">
         </div>
-        <h3>Produto 19</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 19, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Ryzen 5 7600X</h3>
+        <p class="product-price">R$ 1.000,00</p>
+        <p>processador de alto desempenho da arquitetura Zen 4
+          <br>
+          Com 6 núcleos e 12 threads
+          <br>
+          plataforma AM5 e memórias DDR5.</p>
+        <p class="product-extra">Traz suporte a tecnologias modernas como PCIe 5.0, proporcionando maior longevidade e desempenho para setups atuais.</p>
       </article>
 
       <article class="product-card" data-name="Produto 20" data-index="20">
         <div class="product-image-frame">
-          <img class="product-image-real" src="produtos/produto20.jpeg" alt="Produto 20">
+          <img class="product-image-real" src="produtos/produto20.jpeg" alt="Smart TV 40 AOC RoKu TV">
         </div>
-        <h3>Produto 20</h3>
-        <p class="product-price">R$ 0,00</p>
-        <p>Adicione aqui a descricao principal do produto 20, destacando os beneficios e diferenciais.</p>
-        <p class="product-extra">Espaco para observacoes, especificacoes ou informacoes extras do produto.</p>
+        <h3>Smart TV 40 AOC RoKu TV</h3>
+        <p class="product-price">R$ 899,00</p>
+        <p>Apps: Netflix, YouTube, Prime Video, Disney+, etc. 
+          Loja Solar, comando de voz compatível com Alexa e Google Assistente.</p>
+        <p class="product-extra"></p>
       </article>
     </section>
 
@@ -269,13 +356,27 @@
     (function () {
       const cards = Array.from(document.querySelectorAll(".product-card"));
       const searchInput = document.getElementById("product-search");
+      const suggestionsBox = document.getElementById("catalog-suggestions");
       const counter = document.getElementById("product-counter");
       const pageStatus = document.getElementById("page-status");
       const prevButton = document.getElementById("prev-page");
       const nextButton = document.getElementById("next-page");
+      const productGrid = document.getElementById("product-grid");
       const itemsPerPage = 8;
       let currentPage = 1;
       let filteredCards = cards.slice();
+
+      cards.forEach(function (card) {
+        const title = card.querySelector("h3") ? card.querySelector("h3").textContent : "";
+        const paragraphs = Array.from(card.querySelectorAll("p")).map(function (item) {
+          return item.textContent;
+        }).join(" ");
+        const imageAlt = card.querySelector("img") ? card.querySelector("img").alt : "";
+
+        card.dataset.search = [title, paragraphs, imageAlt, card.dataset.name || ""]
+          .join(" ")
+          .toLowerCase();
+      });
 
       function renderCards() {
         const totalPages = Math.max(1, Math.ceil(filteredCards.length / itemsPerPage));
@@ -298,23 +399,98 @@
         nextButton.disabled = currentPage === totalPages;
       }
 
+      function getSuggestions(query) {
+        if (!query) {
+          return [];
+        }
+
+        const normalizedQuery = query.toLowerCase();
+
+        return cards
+          .map(function (card) {
+            const title = card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : "";
+            return {
+              card: card,
+              title: title,
+              search: card.dataset.search || ""
+            };
+          })
+          .filter(function (item) {
+            return item.search.includes(normalizedQuery);
+          })
+          .sort(function (a, b) {
+            const aStarts = a.title.toLowerCase().startsWith(normalizedQuery) ? 0 : 1;
+            const bStarts = b.title.toLowerCase().startsWith(normalizedQuery) ? 0 : 1;
+            if (aStarts !== bStarts) {
+              return aStarts - bStarts;
+            }
+            return a.title.localeCompare(b.title);
+          })
+          .slice(0, 6);
+      }
+
+      function renderSuggestions(query) {
+        const suggestions = getSuggestions(query);
+
+        suggestionsBox.innerHTML = "";
+
+        if (!query || suggestions.length === 0) {
+          suggestionsBox.hidden = true;
+          return;
+        }
+
+        suggestions.forEach(function (item) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "catalog-suggestion-item";
+          button.textContent = item.title;
+          button.addEventListener("click", function () {
+            searchInput.value = item.title;
+            suggestionsBox.hidden = true;
+            filterCards();
+            scrollToProducts();
+          });
+          suggestionsBox.appendChild(button);
+        });
+
+        suggestionsBox.hidden = false;
+      }
+
       function filterCards() {
         const query = searchInput.value.trim().toLowerCase();
 
         filteredCards = cards.filter(function (card) {
-          return card.dataset.name.toLowerCase().includes(query);
+          if (!query) {
+            return true;
+          }
+
+          return (card.dataset.search || "").includes(query);
         });
 
         currentPage = 1;
         renderCards();
+        renderSuggestions(query);
+      }
+
+      function scrollToProducts() {
+        productGrid.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       searchInput.addEventListener("input", filterCards);
+      searchInput.addEventListener("focus", function () {
+        renderSuggestions(searchInput.value.trim());
+      });
+      searchInput.addEventListener("blur", function () {
+        window.setTimeout(function () {
+          suggestionsBox.hidden = true;
+        }, 120);
+      });
 
       prevButton.addEventListener("click", function () {
         if (currentPage > 1) {
           currentPage -= 1;
           renderCards();
+          scrollToProducts();
         }
       });
 
@@ -323,6 +499,7 @@
         if (currentPage < totalPages) {
           currentPage += 1;
           renderCards();
+          scrollToProducts();
         }
       });
 

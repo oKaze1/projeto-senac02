@@ -9,22 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="intro-active">
-  <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
-    <video
-      class="intro-video"
-      id="intro-video"
-      autoplay
-      muted
-      playsinline
-      preload="auto"
-    >
-      <source src="videos/video-logo.mp4" type="video/mp4">
-    </video>
-    <div class="intro-glow"></div>
-  </div>
+<body class="home-page page-animate">
+  <picture class="home-background" aria-hidden="true">
+    <source srcset="imagens/logo.png" type="image/png">
+    <img src="imagens/logo-jpeg.jpeg" alt="" class="home-background-image">
+  </picture>
 
-  <div class="page-shell" id="page-shell">
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <label for="nav-toggle" class="nav-toggle-label intro-layer intro-layer-nav" aria-label="Abrir menu">
     <span></span>
@@ -63,10 +53,34 @@
 
       <div class="hero-note intro-layer intro-layer-4">
         <p>
-          A PrimeTech é uma loja especializada em eletrônicos e acessórios tecnológicos, focada em oferecer produtos de alta qualidade com preços acessíveis. Trabalhamos com uma seleção moderna de dispositivos, incluindo celulares, fones de ouvido, gadgets e diversos acessórios essenciais para o dia a dia.
-          <br>
-          Nosso objetivo é levar inovação, praticidade e tecnologia de ponta para nossos clientes, sempre com um atendimento de confiança e compromisso com a satisfação. Na PrimeTech, você encontra as melhores soluções tecnológicas em um só lugar.
+          Tecnologia, estilo e confianca reunidos em uma experiencia pensada para quem busca
+          produtos de qualidade e um atendimento mais proximo.
         </p>
+      </div>
+    </section>
+
+    <section class="home-about">
+      <div class="home-about-copy intro-layer intro-layer-2">
+        <p class="eyebrow">Conheca a marca</p>
+        <h2>Sobre nos</h2>
+        <p>
+          A PrimeTech e uma loja especializada em eletronicos e acessorios tecnologicos, focada
+          em oferecer produtos de alta qualidade com precos acessiveis. Trabalhamos com uma
+          selecao moderna de dispositivos, incluindo celulares, fones de ouvido, gadgets e
+          diversos acessorios essenciais para o dia a dia.
+        </p>
+        <p>
+          Nosso objetivo e levar inovacao, praticidade e tecnologia de ponta para nossos clientes,
+          sempre com um atendimento de confianca e compromisso com a satisfacao. Na PrimeTech,
+          voce encontra as melhores solucoes tecnologicas em um so lugar.
+        </p>
+      </div>
+
+      <div class="home-video-card intro-layer intro-layer-3">
+        <p class="eyebrow">Video em destaque</p>
+        <video class="home-video" controls preload="metadata" playsinline>
+          <source src="videos/video-anuncio.mp4" type="video/mp4">
+        </video>
       </div>
     </section>
   </main>
@@ -84,44 +98,7 @@
   </a>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Sua Empresa. Todos os direitos reservados.</p>
+    <p>&copy; 2026 PrimeTech. Todos os direitos reservados.</p>
   </footer>
-</div>
-
-  <script>
-    (function () {
-      const body = document.body;
-      const overlay = document.getElementById("intro-overlay");
-      const video = document.getElementById("intro-video");
-      let finished = false;
-
-      function revealSite() {
-        if (finished) {
-          return;
-        }
-
-        finished = true;
-        body.classList.add("intro-ending");
-
-        window.setTimeout(function () {
-          body.classList.remove("intro-active", "intro-ending");
-          if (overlay) {
-            overlay.remove();
-          }
-        }, 1400);
-      }
-
-      if (video) {
-        video.addEventListener("ended", revealSite);
-        video.addEventListener("error", function () {
-          window.setTimeout(revealSite, 900);
-        });
-
-        window.setTimeout(revealSite, 9000);
-      } else {
-        revealSite();
-      }
-    })();
-  </script>
 </body>
 </html>
