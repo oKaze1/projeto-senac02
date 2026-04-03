@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeTech | Produto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menu">
+    <span></span>
+  </label>
+
+  <header class="site-header">
+    <nav class="main-nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="catalogo.html">Catalogo</a>
+      <a class="nav-link" href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="product-page-topbar">
+      <button class="catalog-return-button" id="catalog-return-button" type="button">Voltar ao catalogo</button>
+    </div>
+
+    <section class="product-detail" id="product-detail">
+      <div class="product-gallery-card">
+        <img id="product-detail-image" class="product-detail-image" src="" alt="">
+      </div>
+
+      <div class="product-purchase-card">
+        <p class="eyebrow">Detalhes do produto</p>
+        <h1 id="product-detail-name">Produto</h1>
+        <div class="product-rating-summary" id="product-rating-summary"></div>
+        <p class="product-detail-price" id="product-detail-price"></p>
+        <p class="product-detail-description" id="product-detail-description"></p>
+
+        <div class="product-stock-box">
+          <p class="product-stock-label">Estoque disponivel</p>
+          <p class="product-stock-value" id="product-stock-value"></p>
+        </div>
+
+        <div class="product-action-box">
+          <a class="button" href="https://wa.me/5577999036794" target="_blank" rel="noopener noreferrer">Solicitar pelo WhatsApp</a>
+          <button class="button button-secondary button-as-control" id="catalog-return-inline" type="button">Continuar no catalogo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-extra-sections">
+      <article class="product-info-card">
+        <p class="eyebrow">Sobre o item</p>
+        <h2>Principais destaques</h2>
+        <ul class="product-highlights" id="product-highlights"></ul>
+      </article>
+
+      <article class="product-info-card">
+        <p class="eyebrow">Avaliacoes</p>
+        <h2>O que os clientes dizem</h2>
+        <div class="product-reviews" id="product-reviews"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 PrimeTech. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="product-data.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const productId = Number(params.get("id"));
+      const products = Array.isArray(window.PRODUCTS) ? window.PRODUCTS : [];
+      const product = products.find(function (item) {
+        return item.id === productId;
+      }) || products[0];
+
+      const image = document.getElementById("product-detail-image");
+      const name = document.getElementById("product-detail-name");
+      const ratingSummary = document.getElementById("product-rating-summary");
+      const price = document.getElementById("product-detail-price");
+      const description = document.getElementById("product-detail-description");
+      const stock = document.getElementById("product-stock-value");
+      const highlights = document.getElementById("product-highlights");
+      const reviews = document.getElementById("product-reviews");
+      const returnButton = document.getElementById("catalog-return-button");
+      const inlineReturnButton = document.getElementById("catalog-return-inline");
+      const catalogStateKey = "primetechCatalogState";
+
+      function goBackToCatalog() {
+        const currentStateRaw = window.sessionStorage.getItem(catalogStateKey);
+        if (currentStateRaw) {
+          try {
+            const currentState = JSON.parse(currentStateRaw);
+            currentState.selectedProductId = String(productId || "");
+            window.sessionStorage.setItem(catalogStateKey, JSON.stringify(currentState));
+          } catch (error) {
+            window.sessionStorage.removeItem(catalogStateKey);
+          }
+        }
+        window.location.href = "catalogo.html";
+      }
+
+      if (returnButton) {
+        returnButton.addEventListener("click", goBackToCatalog);
+      }
+
+      if (inlineReturnButton) {
+        inlineReturnButton.addEventListener("click", goBackToCatalog);
+      }
+
+      function stars(value) {
+        return "★".repeat(value) + "☆".repeat(5 - value);
+      }
+
+      function averageRating(items) {
+        if (!items.length) {
+          return "5.0";
+        }
+        const total = items.reduce(function (sum, item) {
+          return sum + item.stars;
+        }, 0);
+        return (total / items.length).toFixed(1);
+      }
+
+      if (!product) {
+        return;
+      }
+
+      document.title = "PrimeTech | " + product.name;
+      image.src = product.image;
+      image.alt = product.name;
+      name.textContent = product.name;
+      ratingSummary.innerHTML = '<span class="stars">' + stars(Math.round(Number(averageRating(product.reviews)))) + '</span><span>' + averageRating(product.reviews) + " de 5 - " + product.reviews.length + ' avaliacoes</span>';
+      price.textContent = product.price;
+      description.textContent = product.description;
+      stock.textContent = product.stock + (product.stock === 1 ? " unidade disponivel" : " unidades disponiveis");
+
+      highlights.innerHTML = "";
+      product.highlights.forEach(function (item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        highlights.appendChild(li);
+      });
+
+      reviews.innerHTML = "";
+      product.reviews.forEach(function (item) {
+        const article = document.createElement("article");
+        article.className = "review-card";
+        article.innerHTML =
+          '<div class="review-head">' +
+            '<strong>' + item.author + '</strong>' +
+            '<span class="stars">' + stars(item.stars) + '</span>' +
+          '</div>' +
+          '<h3>' + item.title + '</h3>' +
+          '<p>' + item.text + '</p>';
+        reviews.appendChild(article);
+      });
+    })();
+  </script>
+</body>
+</html>

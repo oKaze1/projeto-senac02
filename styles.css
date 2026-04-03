@@ -579,9 +579,18 @@ main {
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+.product-card-clickable {
+  cursor: pointer;
+}
+
 .product-card:hover {
   transform: translateY(-4px);
   border-color: rgba(214, 179, 107, 0.4);
+}
+
+.product-card-clickable:focus-visible {
+  outline: 2px solid rgba(214, 179, 107, 0.65);
+  outline-offset: 4px;
 }
 
 .product-image-frame {
@@ -664,6 +673,229 @@ main {
   margin-bottom: 0;
   color: #90a4aa;
   font-size: 0.95rem;
+}
+
+.product-page {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: 132px 24px 56px;
+}
+
+.product-page-topbar {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 18px;
+}
+
+.catalog-return-button,
+.button-as-control {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  font: inherit;
+}
+
+.catalog-return-button {
+  padding: 12px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.catalog-return-button:hover,
+.button-as-control:hover {
+  transform: translateY(-2px);
+}
+
+.button-as-control {
+  width: 100%;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.product-gallery-card,
+.product-purchase-card,
+.product-info-card,
+.review-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-gallery-card {
+  padding: 28px;
+}
+
+.product-detail-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(214, 179, 107, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.product-purchase-card {
+  padding: 30px;
+  position: sticky;
+  top: 24px;
+}
+
+.product-purchase-card h1 {
+  margin: 10px 0 16px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 0.95;
+}
+
+.product-rating-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  color: var(--color-text-soft);
+  margin-bottom: 14px;
+}
+
+.stars {
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+}
+
+.product-detail-price {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.product-detail-description {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.9;
+}
+
+.product-stock-box,
+.product-action-box {
+  margin-top: 24px;
+}
+
+.product-stock-box {
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: rgba(214, 179, 107, 0.08);
+  border: 1px solid rgba(214, 179, 107, 0.16);
+}
+
+.product-stock-label,
+.product-stock-value {
+  margin: 0;
+}
+
+.product-stock-label {
+  color: var(--color-accent-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.product-stock-value {
+  margin-top: 8px;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.product-action-box {
+  display: grid;
+  gap: 12px;
+}
+
+.product-extra-sections {
+  display: grid;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.product-info-card {
+  padding: 30px;
+}
+
+.product-info-card h2 {
+  margin: 10px 0 18px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1;
+}
+
+.product-highlights {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--color-text-soft);
+  line-height: 2;
+}
+
+.product-reviews {
+  display: grid;
+  gap: 18px;
+}
+
+.review-card {
+  padding: 22px 24px;
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.review-card p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+}
+
+@media (max-width: 960px) {
+  .catalog-intro,
+  .catalog-tools,
+  .product-grid,
+  .catalog-pagination,
+  .home-about,
+  .product-page,
+  .values,
+  .company-info-section {
+    width: min(100%, 1000px);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-purchase-card {
+    position: static;
+  }
 }
 
 .catalog-pagination {
@@ -809,6 +1041,23 @@ main {
     grid-template-columns: 1fr;
     padding-bottom: 44px;
   }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-purchase-card {
+    position: static;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 520px) {
@@ -840,8 +1089,26 @@ main {
   .feature-card,
   .value-card,
   .product-card,
-  .company-info-card {
+  .company-info-card,
+  .product-gallery-card,
+  .product-purchase-card,
+  .product-info-card,
+  .review-card {
     padding: 22px;
+  }
+
+  .product-page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .product-page-topbar {
+    padding-bottom: 14px;
+  }
+
+  .catalog-return-button {
+    width: 100%;
+    justify-content: center;
   }
 
   .brand-copy h1 {
@@ -863,6 +1130,7 @@ main {
   .product-grid,
   .catalog-pagination,
   .home-about,
+  .product-page,
   .values,
   .company-info-section,
   .back-link {
@@ -891,6 +1159,14 @@ main {
   .home-about {
     max-width: 1500px;
     grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .product-page {
+    max-width: 1500px;
+  }
+
+  .product-detail {
+    grid-template-columns: minmax(0, 1.2fr) minmax(420px, 0.8fr);
   }
 
   .product-grid {
